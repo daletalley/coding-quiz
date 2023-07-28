@@ -65,7 +65,7 @@
     font-style: italic;
     text-align: center;
   }
-  
+
   /* Buttons */
   .btn-grid {
     display: grid;
@@ -74,7 +74,13 @@
     margin: 20px 0;
   }
 
-
+   /* Wrapper for buttons */
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
 
 
 
