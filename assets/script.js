@@ -51,7 +51,7 @@ let questions = [
         answers: [
             { text: "document.("myimg"). img. imgSize = "200 px";",
              correct: false },
-            { text: "document.gettextnow("myText"). change. style.,
+            { text: "document.gettextnow("myText"). change. style.,",
              correct: false },
             { text: "document.getElementById("myText"). style. fontSize = "20";",
              correct: true },            
@@ -117,7 +117,7 @@ let questions = [
         ]
     },
     { 
-        question: "What are all the types of Pop up boxes available in JavaScript?",
+        question: "Which are types of Pop up boxes available in JavaScript?",
         answers: [
             { text: "Alert", correct: true },
             { text: "Ready", correct: false },
@@ -126,7 +126,7 @@ let questions = [
         ]
     },
     { 
-        question: "How to leave a Javascript comment?",
+        question: "What are JavaScript Data Types?",
         answers: [
             { text: "Number, String, Boolean, Object, Undefined", correct: true },
             { text: "String, Boolean, Object, Undefined", correct: false },
