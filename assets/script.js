@@ -142,3 +142,12 @@ nextButton.addEventListener("click", () => {
     currentQuestionIndex++
     setNextQuestion()
 });
+
+// timer
+function timeTick() {
+    timeLeft--;
+    timerEl.textContent = "Time Left: " + timeLeft;
+    if (timeLeft <= 0) {
+        saveScore();
+    }
+}
