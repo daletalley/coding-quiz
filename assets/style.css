@@ -27,3 +27,25 @@
     text-decoration: none;
   }
 
+  /* Header */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 25px 0;
+  }
+  
+  .scores a,
+  .timer {
+    font-size: 20px;
+  }
+  
+  .scores a {
+    color: var(--secondary-color);
+    cursor: pointer;
+  }
+  
+  .scores a:hover {
+    color: var(--tertiary-color);
+  }
+  
