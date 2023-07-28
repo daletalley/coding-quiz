@@ -128,6 +128,12 @@
     background-color: red;
   }
 
+  .name-div,
+  .score-div {
+    flex: 1 35%;
+    padding: 10px 0;
+    border: 1px solid var(--correct-color);
+  }
 
 
 
