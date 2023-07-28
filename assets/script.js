@@ -283,7 +283,27 @@ function saveScore() {
     }, 2000)
 };
 
+let loadScores = function () {
 
+    if (!savedScores) {
+        return false;
+    }
+
+    // convert to array
+    savedScores = JSON.parse(savedScores);
+    let initials = document.querySelector("#initials-field").value; 
+    let newScore = {
+        score: timeLeft,
+        initials: initials
+    }
+    savedScores.push(newScore);
+    console.log(savedScores)
+
+    savedScores.forEach(score => {
+        initialsField.innerText = score.initials
+        scoreField.innerText = score.score
+    })
+};
 
 
 
