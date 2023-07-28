@@ -91,4 +91,9 @@
     box-sizing: border-box;
   }
 
-
+    /* Leaderboard */
+    #highscore {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
