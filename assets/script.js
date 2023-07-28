@@ -305,6 +305,11 @@ let loadScores = function () {
     })
 };
 
-
+// submit score
+submitButton.addEventListener("click", function (event) {
+    event.preventDefault()
+    let initials = document.querySelector("#initials-field").value;
+    showHighScores(initials);
+});
 
 
