@@ -135,7 +135,14 @@
     border: 1px solid var(--correct-color);
   }
 
-
+  /* media query any screen smaller than 575px */
+  @media screen and (max-width: 575px) {
+    .btn-grid {
+      grid-template-columns: repeat(1, auto);
+      gap: 0;
+      margin: 0;
+    }
+  }
 
 
 
