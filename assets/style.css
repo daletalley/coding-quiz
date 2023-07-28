@@ -97,3 +97,23 @@
     flex-wrap: wrap;
     text-align: center;
   }
+
+  button {
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    width: auto;
+    overflow: visible;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    font-size: large;
+    margin: 10px;
+    color: var(--white-color);
+    cursor: pointer;
+  }
+
+
+
+
+
+
