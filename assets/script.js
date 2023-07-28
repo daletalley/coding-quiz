@@ -320,7 +320,11 @@ restartButton.addEventListener("click", function () {
     window.location.reload();
 });
 
-
+// clear scores
+clearScoreButton.addEventListener("click", function () {
+    localStorage.clear();
+    document.getElementById("highscore").innerHTML = "";
+});
 
 
 
