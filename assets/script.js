@@ -312,4 +312,14 @@ submitButton.addEventListener("click", function (event) {
     showHighScores(initials);
 });
 
+// view high scores
+viewHighScores.addEventListener("click", showHighScores);
+
+
+
+
+
+
+
+
 
