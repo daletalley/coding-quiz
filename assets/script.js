@@ -271,3 +271,20 @@ function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 };
+
+// save scores
+function saveScore() {
+    clearInterval(timerID);
+    timerEl.textContent = "Time: " + timeLeft;
+    setTimeout(function () {
+        questionContainerEl.classList.add("hide");
+        document.getElementById("score-container").classList.remove("hide");
+        document.getElementById("your-score").textContent = "Your score is " + timeLeft;
+    }, 2000)
+};
+
+
+
+
+
+
