@@ -193,3 +193,39 @@ function resetState() {
             (answerButtonsEl.firstChild)
     }
 };
+
+// select answer
+function selectAnswer(e) {
+    let selectedButton = e.target;
+    let correct = selectedButton.dataset.correct;
+    checkAnswerEl.classList.remove("hide")
+    if (correct) {
+        checkAnswerEl.innerHTML = "Correct!";
+    } else {
+        checkAnswerEl.innerHTML = "Wrong Answer.";
+        if (timeLeft <= 10) {
+            timeLeft = 0;
+        } else {
+            // wrong answer -10sec
+            timeLeft -= 10;
+        }
+    }
+
+    Array.from(answerButtonsEl.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove("hide")
+        checkAnswerEl.classList.remove("hide")
+    } else {
+        startButton.classList.remove("hide")
+        saveScore();
+    }
+};
+    
+
+
+
+
+
