@@ -135,3 +135,10 @@ let questions = [
         ]
     },
 ];
+
+// start first question & next button 
+startButton.addEventListener("click", startGame);
+nextButton.addEventListener("click", () => {
+    currentQuestionIndex++
+    setNextQuestion()
+});
