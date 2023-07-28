@@ -18,7 +18,7 @@ let scores = JSON.parse(localStorage.getItem("scores")) || [];
 
 let shuffledQuestions, currentQuestionIndex;
 
-// Questions and answers
+// Questions and the answers
 let questions = [
     { 
         question: "How do you write 'Hello World' in an alert box?", 
@@ -47,15 +47,15 @@ let questions = [
         ]
     },
     { 
-        question: "How can the style/class of an element be changed?", 
+        question: "How to write an IF statement for executing some code if 'i' is NOT equal to 2?", 
         answers: [
-            { text: "document.("myimg"). img. imgSize = "200 px";",
+            { text: "if i = 2",
              correct: false },
-            { text: "document.gettextnow("myText"). change. style.,",
+            { text: "if (i <1> 2)",
              correct: false },
-            { text: "document.getElementById("myText"). style. fontSize = "20";",
+            { text: "if (i != 2)",
              correct: true },            
-            { text: "None of the above",
+            { text: "if i (2)",
              correct: false }
         ]
     },
@@ -76,62 +76,9 @@ let questions = [
         question: "How to leave a Javascript comment?",
         answers: [
             { text: "** Leave a comment", correct: false },
-            { text: "*/ Leave a comment", correct: true },
+            { text: "!/ Leave a comment", correct: false },
             { text: "++ Leave a comment", correct: false },
             { text: "// Leave a comment", correct: true }
-        ]
-    },
-    { 
-        question: "What are all the looping structures in JavaScript??", 
-        answers: [
-            { text: "ready, for, first",
-             correct: false },
-            { text: "for, read, do-while",
-             correct: false },
-            { text: "for, while, do-while",
-             correct: true },            
-            { text: "None of the above",
-             correct: false }
-        ]
-    },
-    { 
-        question: "What does NULL mean?",
-        answers: [
-            { text: "Represents a repeated value in the document", correct: false },
-            { text: "Valid values detected in file", correct: false },
-            { text: "Represents an alert from the vscode", correct: false },
-            { text: "No object or null string, no valid boolean value, no number, and no array object", correct: true }
-        ]
-    },
-    { 
-        question: "What is an undefined value in JavaScript??", 
-        answers: [
-            { text: "A variable used in the code does NOT exist",
-             correct: true },
-            { text: "A variable is assigned to a value",
-             correct: false },
-            { text: "Property does NOT exist",
-             correct: true },            
-            { text: "None of the above",
-             correct: false }
-        ]
-    },
-    { 
-        question: "Which are types of Pop up boxes available in JavaScript?",
-        answers: [
-            { text: "Alert", correct: true },
-            { text: "Ready", correct: false },
-            { text: "Prompt", correct: true },
-            { text: "None of the above", correct: false }
-        ]
-    },
-    { 
-        question: "What are JavaScript Data Types?",
-        answers: [
-            { text: "Number, String, Boolean, Object, Undefined", correct: true },
-            { text: "String, Boolean, Object, Undefined", correct: false },
-            { text: "Number, String, Symbols, Object, Undefined", correct: false },
-            { text: "Symbols, String, Boolean, Object", correct: false }
         ]
     },
 ];
@@ -151,6 +98,7 @@ function timeTick() {
         saveScore();
     }
 }
+
 // start quiz
 function startGame() {
     timerID = setInterval(timeTick, 1000);
@@ -223,7 +171,7 @@ function selectAnswer(e) {
         saveScore();
     }
 };
-    
+
 // answer btn color
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -233,6 +181,9 @@ function setStatusClass(element, correct) {
         element.classList.add("wrong");
     }
 };
+
+
+
 
 // show high scores
 function showHighScores(initials) {
@@ -265,6 +216,9 @@ function showHighScores(initials) {
     localStorage.setItem("scores", JSON.stringify(scores));
 
 };
+
+
+
 
 // remove all classes
 function clearStatusClass(element) {
@@ -305,6 +259,8 @@ let loadScores = function () {
     })
 };
 
+
+
 // submit score
 submitButton.addEventListener("click", function (event) {
     event.preventDefault()
@@ -312,21 +268,31 @@ submitButton.addEventListener("click", function (event) {
     showHighScores(initials);
 });
 
+
+
+
+
+
 // view high scores
 viewHighScores.addEventListener("click", showHighScores);
+
+
+
+
+
 
 // restart 
 restartButton.addEventListener("click", function () {
     window.location.reload();
 });
 
+
+
+
+
 // clear scores
 clearScoreButton.addEventListener("click", function () {
     localStorage.clear();
     document.getElementById("highscore").innerHTML = "";
 });
-
-
-
-
 

@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="assets/style.css">
-</head>
 
-<body>
-    <header>
-        <section class="scores">
-            <a id="highscores-page">View High Scores</a>
-        </section>
-        <section id="timer" class="timer">
-            Time: 60
-        </section>
-    </header>
-
-    <section id="start-container" class="start-quiz">
-        <h1>JavaScript Quiz</h1>
-        <section>
-            <button id="start-btn" class="start-btn">Start Quiz</button>
-        </section>
-    </section>
-
-    <section id="question-container" class="hide">
-        <h1 id="question"></h1>
-            <section id="answer-buttons" class="btn-setup">
-                <button class="btn"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Timed JavaScript Quiz</title>
+        <link rel="stylesheet" href="./assets/style.css" />
+    </head>
+ 
+    <body>
+        <header>
+            <section class="scores">
+                <a id="highscores-link">View High Scores</a>
             </section>
-        <h2 id="check-answer" class="correct-wront hide"></h2>
-            <section>
-                <button id="next-button" class="next-btn hide">Next Question</button>
+            <section id="timer" class="timer">
+                Time: 60
             </section>
-    </section>
+        </header>
 
-    <section id="score-container" class="hide">
-        <form id="submit-form">
-            <h3 id="user-score"></h3>
-            <label id="initials-label">Enter your initials to save the score:</label>
-            <input type="text" id="initials-field" maxlength="3" placeholder="Enter your initials">
-            <button id="submit-btn"></button>
-        </form>
-    </section>
-
-    <section id="highscores" class="highscores-container hide">
-        <section id="high-scores">
-            <h1 class="centered">High Scores</h1>
-            <section id="highscore" class="highscore highscore-list">
-            </section>
+        <section id="start-container" class="start-quiz">
+            <h1>JavaScript Quiz</h1>
             <section class="controls">
-                <button id="restart-btn">Restart</button>
-                <button id="clear-btn">Clear All Scores</button>
+                <button id="start-btn" class="start-btn">Start Quiz</button>
             </section>
         </section>
-    </section>
 
+        <section id="question-container" class="hide">
+            <h1 id="question"></h1>
+                <section id="answer-buttons" class="btn-grid">
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                </section>
+            <h2 id="check-answer" class="correct-wrong hide"></h2>
+                <section class="controls">
+                    <button id="next-btn" class="next-btn hide">Next</button>
+                </section>
+        </section>
 
+        <section id="score-container" class="hide">
+            <form id="submit-form">
+                <h3 id="your-score"></h3>
+                <label id="initials-label">Enter your initials to save the score:</label>
+                <input type="text" id="initials-field" maxlength="3" placeholder="Enter your initials" />
+                <button id="submit-btn">Submit</button>
+            </form>
+        </section>
 
-    <script src="assets/script.js"></script>
-</body>
+        <section id="highscores" class="highscores-container hide">
+            <section id="high-scores">
+                <h1 class="centered">Leader board</h1>
+                <section id="highscore" class="highscore highscore-list">
+                </section>
+                <section class="controls">
+                    <button id="restart-btn">Restart</button>
+                    <button id="clear-btn">Clear All Scores</button>
+                </section>
+            </section>
+            
+        </section>
+
+        <script src="./assets/script.js"></script>
+    </body>
+
 </html>
