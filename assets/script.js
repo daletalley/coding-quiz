@@ -234,6 +234,36 @@ function setStatusClass(element, correct) {
     }
 };
 
+// show high scores
+function showHighScores(initials) {
+    document.getElementById("highscores").classList.remove("hide")
+    document.getElementById("score-container").classList.add("hide");
+    startContainerEl.classList.add("hide");
+    questionContainerEl.classList.add("hide");
+    if (typeof initials == "string") {
+        let score = {
+            initials, timeLeft
+        }
+        scores.push(score)
+    }
 
+    let highScoreEl = document.getElementById("highscore");
+    highScoreEl.innerHTML = "";
+
+    for (i = 0; i < scores.length; i++) {
+        let div1 = document.createElement("div");
+        div1.setAttribute("class", "name-div");
+        div1.innerText = scores[i].initials;
+        let div2 = document.createElement("div");
+        div2.setAttribute("class", "score-div");
+        div2.innerText = scores[i].timeLeft;
+
+        highScoreEl.appendChild(div1);
+        highScoreEl.appendChild(div2);
+    }
+
+    localStorage.setItem("scores", JSON.stringify(scores));
+
+};
 
 
