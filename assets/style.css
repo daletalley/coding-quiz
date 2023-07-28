@@ -49,3 +49,27 @@
     color: var(--tertiary-color);
   }
   
+    /* Start Quiz */
+    .start-quiz {
+        text-align: center;
+      }
+      
+      h1 {
+        margin-bottom: 10px;
+      }
+      
+      h2 {
+        color: blueviolet;
+        border-top: 1px solid red;
+        margin: 20px 0;
+        font-style: italic;
+        text-align: center;
+      }
+      
+
+
+
+
+
+
+
