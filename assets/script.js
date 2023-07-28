@@ -315,7 +315,10 @@ submitButton.addEventListener("click", function (event) {
 // view high scores
 viewHighScores.addEventListener("click", showHighScores);
 
-
+// restart 
+restartButton.addEventListener("click", function () {
+    window.location.reload();
+});
 
 
 
