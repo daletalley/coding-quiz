@@ -120,4 +120,22 @@
     display: none;
   }
 
+  .btn.correct {
+    background-color: var(--correct-color);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
