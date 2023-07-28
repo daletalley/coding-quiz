@@ -162,3 +162,11 @@ function startGame() {
     timeTick();
     setNextQuestion();
 };
+
+// next question
+function setNextQuestion() {
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
+};
+
+
