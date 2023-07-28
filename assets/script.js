@@ -184,3 +184,12 @@ function showQuestion(question) {
     })
 };
 
+// reset state 
+function resetState() {
+    nextButton.classList.add("hide")
+    checkAnswerEl.classList.add("hide")
+    while (answerButtonsEl.firstChild) {
+        answerButtonsEl.removeChild
+            (answerButtonsEl.firstChild)
+    }
+};
